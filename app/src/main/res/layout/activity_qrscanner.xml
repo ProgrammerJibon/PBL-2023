@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="1024px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/baseline_crop_free_24"
+            app:tint="#40FFFFFF" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/camera_preview"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:text="University of Global Village" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:text="Project Based Lerning - 2023" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/camera_preview"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="* Scan the QR code from Event Page.\n* In ticket selling time, anyone can get a ticket with this app.\n* After submitting details, you'll get an email with ticket status.\n\n Developed by MD. Jibon Howlader, MA Alim &amp; Mrinal Dey" />
+    </LinearLayout>
+
+
+</RelativeLayout>

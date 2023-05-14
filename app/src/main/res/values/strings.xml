@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PBL 2023</string>
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://pbl2.jibon.io/.well-known/assetlinks.json\" }]</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="all"
+    android:background="@color/black"
+    tools:context=".TicketVerifierActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_centerInParent="true"
+        android:hint="Enter App Code"
+        android:id="@+id/app_code_enter"
+        android:textColor="@color/deep_pink"
+        android:maxLength="4"
+        android:background="@drawable/edittext_style_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/beforeEnterCode"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/camera_preview"
+            android:text="Ticket Validator"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <SurfaceView
+            android:id="@+id/camera_preview"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="1024px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/camera_preview"
+            android:text="Please verify the person with the photo that'll appear.\nIf matches, allow access, else request him to go out.\nAlways let them entered while the status is only APPROVED."
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/gray"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:visibility="gone"
+        android:id="@+id/floating"
+        android:background="#B3000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/baseline_notifications_none_24"
+            android:id="@+id/userAvatar"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Name"
+            android:padding="16dp"
+            android:textSize="20dp"
+            android:id="@+id/userName"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Status"
+            android:id="@+id/userStatus"
+            android:padding="16dp"
+            android:textSize="14dp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/btnDecline"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/deep_pink"
+                android:textColor="@color/white"
+                android:text="Decline"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/btnGrant"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/white"
+                android:text="Access Grant"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
